@@ -2,14 +2,8 @@
   "name": "one-piece-tcg-journal",
   "version": "1.0.0",
   "description": "A comprehensive gameplay journal and analytics tool for One Piece Trading Card Game",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "gh-pages -d build"
-  },
+  "private": true,
+  "homepage": "https://pkpe.github.io/one-piece-tcg-journal",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -17,20 +11,23 @@
     "recharts": "^2.8.0",
     "lucide-react": "^0.263.1"
   },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
   "devDependencies": {
     "gh-pages": "^6.0.0"
   },
-  "homepage": "https://yourusername.github.io/one-piece-tcg-journal",
-  "keywords": [
-    "one-piece",
-    "tcg",
-    "trading-card-game",
-    "journal",
-    "analytics",
-    "react"
-  ],
-  "author": "Your Name",
-  "license": "MIT",
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
   "browserslist": {
     "production": [
       ">0.2%",
